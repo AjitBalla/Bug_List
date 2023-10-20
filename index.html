@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug List</title>
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);
+            --neumorphic-shadow: 10px 10px 20px #d1ccd1, -10px -10px 20px #ffffff;
+            --neumorphic-inset: inset 5px 5px 10px #d1ccd1, inset -5px -5px 10px #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 50px;
+            background: var(--primary-gradient);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        
+		h1 {
+            font-size: 3em;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.4);  /* semi-transparent black background */
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);  /* soft shadow */
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        h1:hover {
+                   transform: translateY(-5px);
+                   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.4);  /* intensified shadow on hover */
+        }
+
+
+
+        .bug {
+            background: #f0f0f0;
+            border-radius: 15px;
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+            margin-bottom: 25px;
+            box-shadow: var(--neumorphic-shadow);
+            transition: 0.2s ease;
+        }
+
+        .bug:hover {
+            transform: translateY(-5px);
+            box-shadow: 12px 12px 24px #d1ccd1, -12px -12px 24px #ffffff;
+        }
+
+        .bug-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .bug-description,
+        .bug-files,
+        .bug-status,
+        .bug-notes {
+            margin-top: 15px;
+        }
+
+        select,
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background-color: #e0e0e0;
+            box-shadow: var(--neumorphic-inset);
+            resize: vertical;
+            font-size: 16px;
+            transition: 0.2s ease;
+        }
+
+        select:focus,
+        textarea:focus {
+            background-color: #e8e8e8;
+            outline: none;
+        }
+		.status-box, .notes-box {
+                                width: 100%;
+                                padding: 15px;
+                                border: none;
+                                border-radius: 10px;
+                                background-color: #e0e0e0;
+                                box-shadow: var(--neumorphic-inset);
+                                font-size: 16px;
+                                transition: 0.2s ease;
+                                margin-top: 5px;
+                                  }
+
+        .status-box:focus, .notes-box:focus {
+                                background-color: #e8e8e8;
+                                outline: none;
+                                            }
+
+
+    </style>
+</head>
+
+<body>
+    <h1>Bug List</h1>
+
+
+    <div class="bug" data-bug-id="1">
+       <div class="bug-title">1. Log and Version:</div>
+       <div class="bug-description">Create some sort of log for each bug and some sort of Version control on the software fixes.</div>
+    
+       <div class="predefined-status">
+            Status:
+            <div class="status-box">Corrected</div> <!-- Change the inner text to the desired status -->
+       </div>
+    
+       <div class="predefined-notes">
+           Notes:
+           <div class="notes-box">A separate folder is created, and updated code is released based on the version numbers.
+Version numbers and changes made are indicated in the comments at the top of the code in their respective.py files.</div> <!-- Change the inner text to the desired note -->
+       </div>
+    </div>
+    <div class="bug" data-bug-id="2">
+       <div class="bug-title">2. Comment Blocks:</div>
+       <div class="bug-description">Writing detailed comment for each and every class and function in:
+        Main_create_polypoints.py
+        Parameter_create_polypoints.py
+        Wall_class.py
+        basic_geometry.py
+        edge_detection.py
+		plane_detection.py</div>
+    
+       <div class="predefined-status">
+            Status:
+            <div class="status-box">Corrected</div> <!-- Change the inner text to the desired status -->
+       </div>
+    
+       <div class="predefined-notes">
+           Notes:
+           <div class="notes-box">A detailed comment block is added before each and every class and function in the six .py files mentioned above. This is very essential to making others understand what is going on in the Python code.</div> <!-- Change the inner text to the desired note -->
+       </div>
+    </div>
+	<div class="bug" data-bug-id="3">
+       <div class="bug-title">3. Wall numbers:</div>
+       <div class="bug-description">Wrong numbers in the output file(.hdf5)</div>
+    
+       <div class="predefined-status">
+            Status:
+            <div class="status-box">Corrected</div> <!-- Change the inner text to the desired status -->
+       </div>
+    
+       <div class="predefined-notes">
+           Notes:
+           <div class="notes-box">The correction made in the code is such that the wall numbers are correct to Wall 1, Wall 2,... rather than Wall 0, Wall 1, Wall 2,...</div> <!-- Change the inner text to the desired note -->
+       </div>
+    </div>
+	<div class="bug" data-bug-id="4">
+       <div class="bug-title">4. Single Point Wall-to-Soffit:</div>
+       <div class="bug-description">All edges that are detected should have a minimum of two points.</div>
+    
+       <div class="predefined-status">
+            Status:
+            <div class="status-box">Corrected</div> <!-- Change the inner text to the desired status -->
+       </div>
+    
+       <div class="predefined-notes">
+           Notes:
+           <div class="notes-box">The correction was made in the code so that each and every detected edge has a minimum of 2 points now.</div> <!-- Change the inner text to the desired note -->
+       </div>
+    </div>
+	<div class="bug" data-bug-id="5">
+       <div class="bug-title">5. Fluctuations:</div>
+       <div class="bug-description">Fluctuation between the x,y,z coordinates of the polypoints</div>
+    
+       <div class="predefined-status">
+            Status:
+            <div class="status-box">In Progress</div> <!-- Change the inner text to the desired status -->
+       </div>
+    
+       <div class="predefined-notes">
+           Notes:
+           <div class="notes-box">Still facing the issue between t_median & t_min, t_max.</div> <!-- Change the inner text to the desired note -->
+       </div>
+    </div>
+	<div class="bug" data-bug-id="6">
+       <div class="bug-title">6. Polypoint spacing:</div>
+       <div class="bug-description">Inconsistent and not following the set value.</div>
+    
+       <div class="predefined-status">
+            Status:
+            <div class="status-box">Corrected</div> <!-- Change the inner text to the desired status -->
+       </div>
+    
+       <div class="predefined-notes">
+           Notes:
+           <div class="notes-box">There is no other way to correct it than to clearly write a comment that there will be a 10x shift in the results.</div> <!-- Change the inner text to the desired note -->
+       </div>
+    </div>
+	<div class="bug" data-bug-id="7">
+       <div class="bug-title">7. Bent Edges:</div>
+       <div class="bug-description">Some points grossly in the wrong Y position</div>
+    
+       <div class="predefined-status">
+            Status:
+            <div class="status-box">Not started</div> <!-- Change the inner text to the desired status -->
+       </div>
+       <div class="predefined-notes">
+           Notes:
+           <div class="notes-box">Upcoming Week!</div> <!-- Change the inner text to the desired note -->
+       </div>
+    </div>
+	<div class="bug" data-bug-id="8">
+       <div class="bug-title">8. Door/Soffit/Wall Intersection:</div>
+       <div class="bug-description">Interrupted edge not indicated.</div>
+    
+       <div class="predefined-status">
+            Status:
+            <div class="status-box">Not started</div> <!-- Change the inner text to the desired status -->
+       </div>
+    
+       <div class="predefined-notes">
+           Notes:
+           <div class="notes-box">Upcoming Week!</div> <!-- Change the inner text to the desired note -->
+       </div>
+    </div>
+    <script>
+        // Function to update bug status in localStorage
+        function updateStatus(selectElement) {
+            const bugDiv = selectElement.closest('.bug');
+            const bugId = bugDiv.getAttribute('data-bug-id');
+            const statusValue = selectElement.value;
+            localStorage.setItem(`bug-${bugId}-status`, statusValue);
+        }
+
+        // Function to update bug notes in localStorage
+        function updateNotes(textareaElement) {
+            const bugDiv = textareaElement.closest('.bug');
+            const bugId = bugDiv.getAttribute('data-bug-id');
+            const notesValue = textareaElement.value;
+            localStorage.setItem(`bug-${bugId}-notes`, notesValue);
+        }
+
+        // Function to load saved data from localStorage
+        function loadDataFromLocalStorage() {
+            const bugs = document.querySelectorAll('.bug');
+            bugs.forEach(bug => {
+                const bugId = bug.getAttribute('data-bug-id');
+                const savedStatus = localStorage.getItem(`bug-${bugId}-status`);
+                const savedNotes = localStorage.getItem(`bug-${bugId}-notes`);
+
+                if (savedStatus) {
+                    bug.querySelector('select').value = savedStatus;
+                }
+
+                if (savedNotes) {
+                    bug.querySelector('textarea').value = savedNotes;
+                }
+            });
+        }
+
+        // Load saved data when the page is loaded
+        window.onload = loadDataFromLocalStorage;
+    </script>
+</body>
+
+</html>
